@@ -1,14 +1,12 @@
 package com.tbz.shop.product.book;
 
 import com.tbz.shop.IdNotFoundException;
+import com.tbz.shop.product.cd.CD;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +24,11 @@ public class BookWeb {
     public ResponseEntity<Book> oneCD(@PathVariable("bookId") Integer id) throws IdNotFoundException {
         Book book = service.getOneBook(id);
         return new ResponseEntity<>(book, HttpStatus.OK);
+    }
+    @PostMapping
+    public ResponseEntity<Book> createCD(@RequestBody Book book) {
+        Book createdBook = service.createBook(book);
+        return new ResponseEntity<>(createdBook, HttpStatus.CREATED);
     }
     @ExceptionHandler(IdNotFoundException.class)
     public ResponseEntity<String> handlerNoSuchReviewException(IdNotFoundException re) {

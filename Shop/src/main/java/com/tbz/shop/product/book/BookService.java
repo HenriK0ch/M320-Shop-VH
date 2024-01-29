@@ -19,4 +19,7 @@ public class BookService {
     public Book getOneBook(Integer id) throws IdNotFoundException {
         return bookRepository.findById(id).orElseThrow(() -> new IdNotFoundException("ID "+ id +" not found"));
     }
+    public Book createBook(Book book) {
+        return bookRepository.save(book);
+    }
 }

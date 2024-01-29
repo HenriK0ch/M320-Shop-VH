@@ -16,4 +16,8 @@ public class CDService {
     }
 
     public CD getOneCD(Integer id) throws IdNotFoundException {return cdRepository.findById(id).orElseThrow(() -> new IdNotFoundException("ID "+ id +" not found"));}
+
+    public CD createCD(CD cd) {
+        return cdRepository.save(cd);
+    }
 }
