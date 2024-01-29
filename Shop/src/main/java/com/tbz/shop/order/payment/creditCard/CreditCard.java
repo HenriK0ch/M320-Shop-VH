@@ -1,4 +1,4 @@
-package com.tbz.shop.order.payment.creditCard;
+package com.tbz.shop.order.payment.creditcard;
 
 import com.tbz.shop.order.payment.PaymentMethod;
 import jakarta.persistence.Column;

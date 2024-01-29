@@ -1,4 +1,4 @@
-package com.tbz.shop.order.payment.prepaidCard;
+package com.tbz.shop.order.payment.prepaidcard;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

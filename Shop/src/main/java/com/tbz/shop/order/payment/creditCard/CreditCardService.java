@@ -1,4 +1,4 @@
-package com.tbz.shop.order.payment.creditCard;
+package com.tbz.shop.order.payment.creditcard;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
